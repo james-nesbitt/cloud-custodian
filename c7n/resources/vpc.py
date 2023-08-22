@@ -97,7 +97,7 @@ class DeleteVpc(BaseAction):
 
         - name: aws-ec2-vpc-delete
           resource: vpc
-          action:
+          actions:
             - type: delete
 
     """
