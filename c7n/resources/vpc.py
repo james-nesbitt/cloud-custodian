@@ -101,8 +101,8 @@ class DeleteVpc(BaseAction):
             - type: delete
 
     """
-    schema = type_schema('delete')
-    permissions = ('ec2:DeleteVpc')
+    schema = type_schema('delete',)
+    permissions = ('ec2:DeleteVpc',)
 
     def process(self, resources):
         client = local_session(self.manager.session_factory).client('ec2')
