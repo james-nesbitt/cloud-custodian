@@ -110,7 +110,7 @@ class DeleteVpc(BaseAction):
         for vpc in resources:
             self.manager.retry(
                 client.delete_vpc,
-                VpcId=vpc.id,
+                VpcId=vpc['VpcId'],
                 ignore_err_codes=(
                     'NoSuchEntityException',
                     'DeleteConflictException',
