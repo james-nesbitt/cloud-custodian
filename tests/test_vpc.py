@@ -3671,7 +3671,7 @@ def test_vpc_delete(test, vpc_delete):
             "name": "delete-vpc",
             "resource": "vpc",
             "filters": [{"tag:Name": "c7n-test"}],
-            "actions": [{"type": "delete"}],
+            "actions": [{"type": "delete-empty"}],
         },
         session_factory=factory,
     )

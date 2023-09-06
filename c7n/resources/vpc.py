@@ -85,7 +85,7 @@ class ModifyVpc(BaseAction):
                 client.modify_vpc_attribute(**params)
 
 
-@Vpc.action_registry.register('delete')
+@Vpc.action_registry.register('delete-empty')
 class DeleteVpc(BaseAction):
     """Delete an empty VPC
 
@@ -98,10 +98,10 @@ class DeleteVpc(BaseAction):
         - name: aws-ec2-vpc-delete
           resource: vpc
           actions:
-            - type: delete
+            - type: delete-empty
 
     """
-    schema = type_schema('delete',)
+    schema = type_schema('delete-empty',)
     permissions = ('ec2:DeleteVpc',)
 
     def process(self, resources):
