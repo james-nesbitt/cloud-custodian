@@ -87,7 +87,7 @@ class ModifyVpc(BaseAction):
 
 @Vpc.action_registry.register('delete')
 class DeleteVpc(BaseAction):
-    """Delete a VPC
+    """Delete an empty VPC
 
     For example, if you want to delete an empty VPC
 
